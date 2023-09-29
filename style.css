@@ -1,0 +1,123 @@
+body{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(245, 245, 245);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.poster{
+    background-image: url("leaves.jpg");
+    width: 100vw;
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Great Vibes', cursive;
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+fieldset{
+    border: 0;
+    background-color: white;
+    margin: 0;
+    padding: 20px 50px 20px 30px;
+    border-radius: 13px;
+    filter: drop-shadow(0 5px 5px rgb(220,220,220));
+}
+
+fieldset>div{
+    margin: 0 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+}
+fieldset>div>label{
+    text-transform: uppercase;
+    font-size: small;
+}   
+fieldset div input{
+    width: 60vw;
+    border-radius: 5px;
+    height: 20px;
+    border: solid 2px rgb(180,180,180);
+}
+fieldset>div:first-child{
+    margin-top: 10px;
+    font-weight: 600;
+}
+#form h1{
+    font-size:large;
+    margin: 30px;
+}
+#form h1:first-child{
+    font-size:medium;
+    font-weight: 600;
+    font-style: italic;
+    margin: 30px;
+}
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+button{
+    background-color: green;
+    color: white ;
+    border: 0;
+    width: 50%;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 800;
+}
+
+
+button:hover{
+    background-color: rgb(50, 150, 50);
+}
+
+
+@media only screen and (min-width: 1000px)  {
+    body{
+        display: flex;
+        align-content: center;             
+    }
+
+    #form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;    
+    }
+    fieldset{
+        border-radius: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 30% 30%;
+        padding: 20px 0;
+    }
+    fieldset>div{
+        margin: 0 30px;
+    }
+
+    .poster{
+        background-image: url("leaves.jpg");
+        height: 100vh;
+        width: 800px;
+        font-size: 30px;
+    }
+
+    fieldset>div>input{
+        width: 150px;
+    }
+    fieldset>div:first-of-type{
+        grid-column: 1/3;
+    }
+}
